@@ -1,0 +1,372 @@
+---
+version: 1
+interactions:
+- request:
+    body: '{"credentials":{"name":"user@meteor","password":"password","site":{"contentUrl":"testdev550928"}}}'
+    form: {}
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      X-Tableau-Auth:
+      - ""
+    url: https://server.tableau.com/api/3.13/auth/signin
+    method: POST
+  response:
+    body: '{"credentials":{"site":{"id":"529d2cc3-0b46-4360-aa69-688785ce1497","contentUrl":"testdev550928"},"user":{"id":"2aed1e7b-975b-430f-ab9d-a574bb88f245"},"token":"Cab3YR3ORK-M4UHp5sWbXw|4qxMDA1hfuGptVUIDQwoPXMlJu3HFhS3"}}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Thu, 04 Nov 2021 02:48:38 GMT
+      P3p:
+      - CP="NON"
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Server:
+      - Tableau
+      Set-Cookie:
+      - hid=10axpd-hap01; domain=.server.tableau.com; path=/; HttpOnly; Secure;
+        SameSite=None
+      - AWSELB=3DAB357D1283FCCC77AA83D08989B29DE92E63276A35E4A6497FDFF23627AAC36FDB3A158CB22BDF1A851E0BB71E913D1A340F4B536F5041BDA6C709962BC0D55630C584DD31AD9AA74EA892D878DD28603CF437C4;PATH=/;DOMAIN=.server.tableau.com;SECURE;HTTPONLY;SAMESITE=None
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      Vary:
+      - Accept-Encoding
+      X-Content-Type-Options:
+      - nosniff
+      X-Tableau:
+      - Tableau Server
+      X-Ua-Compatible:
+      - IE=Edge
+      X-Xss-Protection:
+      - 1; mode=block
+    status: '200 '
+    code: 200
+    duration: 1.60747305s
+- request:
+    body: "null"
+    form: {}
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      X-Tableau-Auth:
+      - Cab3YR3ORK-M4UHp5sWbXw|4qxMDA1hfuGptVUIDQwoPXMlJu3HFhS3
+    url: https://server.tableau.com/api/3.13/sites/529d2cc3-0b46-4360-aa69-688785ce1497/workbooks?pageSize=1000&pageNumber=1
+    method: GET
+  response:
+    body: '{"pagination":{"pageNumber":"1","pageSize":"1000","totalAvailable":"3"},"workbooks":{"workbook":[{"project":{"id":"46b2914d-6d2c-4cc5-ba2a-643840c036c6","name":"Samples"},"location":{"id":"46b2914d-6d2c-4cc5-ba2a-643840c036c6","type":"Project","name":"Samples"},"owner":{"id":"2aed1e7b-975b-430f-ab9d-a574bb88f245","name":"user@meteor"},"tags":{},"dataAccelerationConfig":{"accelerationEnabled":false},"id":"969428bf-0bde-4c73-8efe-04c37ec7c2ba","name":"Regional","contentUrl":"Regional","webpageUrl":"https://server.tableau.com/#/site/testdev550928/workbooks/88352","showTabs":"true","size":"2","createdAt":"2021-11-01T11:32:30Z","updatedAt":"2021-11-01T11:32:31Z","encryptExtracts":"false","defaultViewId":"224d5a29-8a40-4b33-9ba5-9af0bab5b661"},{"project":{"id":"46b2914d-6d2c-4cc5-ba2a-643840c036c6","name":"Samples"},"location":{"id":"46b2914d-6d2c-4cc5-ba2a-643840c036c6","type":"Project","name":"Samples"},"owner":{"id":"2aed1e7b-975b-430f-ab9d-a574bb88f245","name":"user@meteor"},"tags":{"tag":[{"label":"forecast"},{"label":"storage"}]},"dataAccelerationConfig":{"accelerationEnabled":false},"id":"a22c1975-13a4-4b66-88e1-d68757e2dc97","name":"Superstore","description":"A
+      sample superstore","contentUrl":"Superstore","webpageUrl":"https://server.tableau.com/#/site/testdev550928/workbooks/88353","showTabs":"true","size":"2","createdAt":"2021-11-01T11:32:35Z","updatedAt":"2021-11-02T06:07:18Z","encryptExtracts":"false","defaultViewId":"43807016-73ff-4152-a822-3cd300d9618a"},{"project":{"id":"c95e1f64-1c3c-4ddf-8999-047a54e2af44","name":"test-meteor"},"location":{"id":"c95e1f64-1c3c-4ddf-8999-047a54e2af44","type":"Project","name":"test-meteor"},"owner":{"id":"2aed1e7b-975b-430f-ab9d-a574bb88f245","name":"user@meteor"},"tags":{},"dataAccelerationConfig":{"accelerationEnabled":false},"id":"37040233-8f4c-4b17-aecf-5c4be36dbf27","name":"InMail
+      Engagement","contentUrl":"InMailEngagement","webpageUrl":"https://server.tableau.com/#/site/testdev550928/workbooks/88403","showTabs":"true","size":"1","createdAt":"2021-11-02T11:57:32Z","updatedAt":"2021-11-02T11:57:33Z","encryptExtracts":"false","defaultViewId":"aea8019f-b29a-4e0f-b5d8-a96fc52188c1"}]}}'
+    headers:
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Thu, 04 Nov 2021 02:48:40 GMT
+      P3p:
+      - CP="NON"
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Server:
+      - Tableau
+      Set-Cookie:
+      - hid=10axpd-hap02; domain=.server.tableau.com; path=/; HttpOnly; Secure;
+        SameSite=None
+      - AWSELB=3DAB357D1283FCCC77AA83D08989B29DE92E63276AE77AD4EE133E11E6F8E8568C0C008FC516BFCBA963679DF38E2D1FF97BC1EC8511A6AA9828B89C5E5846354B6A1B34CAF64809065F8EB34318B654D2E3D02F6F;PATH=/;DOMAIN=.server.tableau.com;SECURE;HTTPONLY;SAMESITE=None
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      Vary:
+      - Accept-Encoding
+      X-Content-Type-Options:
+      - nosniff
+      X-Tableau:
+      - Tableau Server
+      X-Ua-Compatible:
+      - IE=Edge
+      X-Xss-Protection:
+      - 1; mode=block
+    status: '200 '
+    code: 200
+    duration: 261.596138ms
+- request:
+    body: "null"
+    form: {}
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      X-Tableau-Auth:
+      - Cab3YR3ORK-M4UHp5sWbXw|4qxMDA1hfuGptVUIDQwoPXMlJu3HFhS3
+    url: https://server.tableau.com/api/3.13/sites/529d2cc3-0b46-4360-aa69-688785ce1497/workbooks/969428bf-0bde-4c73-8efe-04c37ec7c2ba
+    method: GET
+  response:
+    body: '{"workbook":{"project":{"id":"46b2914d-6d2c-4cc5-ba2a-643840c036c6","name":"Samples"},"location":{"id":"46b2914d-6d2c-4cc5-ba2a-643840c036c6","type":"Project","name":"Samples"},"owner":{"id":"2aed1e7b-975b-430f-ab9d-a574bb88f245","name":"user@meteor"},"tags":{},"views":{"view":[{"tags":{},"id":"224d5a29-8a40-4b33-9ba5-9af0bab5b661","name":"Obesity","contentUrl":"Regional/sheets/Obesity","createdAt":"2021-11-01T11:32:31Z","updatedAt":"2021-11-01T11:32:31Z","viewUrlName":"Obesity"},{"tags":{},"id":"a139e8b6-03c8-4989-b37b-a7f7e6e82415","name":"College","contentUrl":"Regional/sheets/College","createdAt":"2021-11-01T11:32:31Z","updatedAt":"2021-11-01T11:32:31Z","viewUrlName":"College"},{"tags":{},"id":"bd362967-df94-45ec-b723-8c562abc8ccb","name":"Global
+      Temperatures","contentUrl":"Regional/sheets/GlobalTemperatures","createdAt":"2021-11-01T11:32:31Z","updatedAt":"2021-11-01T11:32:31Z","viewUrlName":"GlobalTemperatures"},{"tags":{},"id":"c7a57c38-6dd8-49f0-a905-b76f41b4b33e","name":"Flight
+      Delays","contentUrl":"Regional/sheets/FlightDelays","createdAt":"2021-11-01T11:32:31Z","updatedAt":"2021-11-01T11:32:31Z","viewUrlName":"FlightDelays"},{"tags":{},"id":"662b2993-69e8-4588-b57c-51c94ebdebd7","name":"Economy","contentUrl":"Regional/sheets/Economy","createdAt":"2021-11-01T11:32:31Z","updatedAt":"2021-11-01T11:32:31Z","viewUrlName":"Economy"},{"tags":{},"id":"b1b3da27-2f97-4add-87fd-c743bf497783","name":"Stocks","contentUrl":"Regional/sheets/Stocks","createdAt":"2021-11-01T11:32:31Z","updatedAt":"2021-11-01T11:32:31Z","viewUrlName":"Stocks"}]},"dataAccelerationConfig":{"accelerationEnabled":false},"id":"969428bf-0bde-4c73-8efe-04c37ec7c2ba","name":"Regional","contentUrl":"Regional","webpageUrl":"https://server.tableau.com/#/site/testdev550928/workbooks/88352","showTabs":"true","size":"2","createdAt":"2021-11-01T11:32:30Z","updatedAt":"2021-11-01T11:32:31Z","encryptExtracts":"false","defaultViewId":"224d5a29-8a40-4b33-9ba5-9af0bab5b661"}}'
+    headers:
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Thu, 04 Nov 2021 02:48:41 GMT
+      P3p:
+      - CP="NON"
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Server:
+      - Tableau
+      Set-Cookie:
+      - hid=10axpd-hap02; domain=.server.tableau.com; path=/; HttpOnly; Secure;
+        SameSite=None
+      - AWSELB=3DAB357D1283FCCC77AA83D08989B29DE92E63276AE77AD4EE133E11E6F8E8568C0C008FC516BFCBA963679DF38E2D1FF97BC1EC8511A6AA9828B89C5E5846354B6A1B34CAF64809065F8EB34318B654D2E3D02F6F;PATH=/;DOMAIN=.server.tableau.com;SECURE;HTTPONLY;SAMESITE=None
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      Vary:
+      - Accept-Encoding
+      X-Content-Type-Options:
+      - nosniff
+      X-Tableau:
+      - Tableau Server
+      X-Ua-Compatible:
+      - IE=Edge
+      X-Xss-Protection:
+      - 1; mode=block
+    status: '200 '
+    code: 200
+    duration: 974.991326ms
+- request:
+    body: "null"
+    form: {}
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      X-Tableau-Auth:
+      - Cab3YR3ORK-M4UHp5sWbXw|4qxMDA1hfuGptVUIDQwoPXMlJu3HFhS3
+    url: https://server.tableau.com/api/3.13/sites/529d2cc3-0b46-4360-aa69-688785ce1497/workbooks/969428bf-0bde-4c73-8efe-04c37ec7c2ba/connections
+    method: GET
+  response:
+    body: '{"connections":{"connection":[{"datasource":{"id":"0bfc6543-86ab-40b1-a8b7-d73a00de7d55","name":"Stocks"},"id":"cc291ac1-f4f7-49d6-b5ff-e3d6dbc72c22","type":"hyper","embedPassword":false,"serverAddress":"","userName":"tableau_internal_user","queryTaggingEnabled":false},{"datasource":{"id":"4a1302a6-d445-41bb-b5c9-a201b466846a","name":"Economy"},"id":"b918d14e-52a0-42ba-b2fc-ad449a399fb0","type":"hyper","embedPassword":false,"serverAddress":"","userName":"tableau_internal_user","queryTaggingEnabled":false},{"datasource":{"id":"82d82617-48fe-40f1-875a-d9aa4d1e1b86","name":"Flight"},"id":"5f8bee75-8e1a-46e2-a0e7-7dd5c2fde77e","type":"hyper","embedPassword":false,"serverAddress":"","userName":"tableau_internal_user","queryTaggingEnabled":false},{"datasource":{"id":"e5ded210-1699-42c8-82db-22f0bb6b16ec","name":"Global
+      Temperatures"},"id":"86dba071-8123-45a2-a5ca-c182b036d0cd","type":"hyper","embedPassword":false,"serverAddress":"","userName":"tableau_internal_user","queryTaggingEnabled":false},{"datasource":{"id":"082fa857-f964-4c29-8672-6dcfc9596efa","name":"Education"},"id":"333e0a8d-ff91-495f-b4cd-6204cee6b737","type":"hyper","embedPassword":false,"serverAddress":"","userName":"tableau_internal_user","queryTaggingEnabled":false},{"datasource":{"id":"57ec96ca-8e0b-4a53-a0d1-2714e13748bf","name":"Obesity"},"id":"89568541-da09-4aaf-b71c-930a83c538ba","type":"hyper","embedPassword":false,"serverAddress":"","userName":"tableau_internal_user","queryTaggingEnabled":false}]}}'
+    headers:
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Thu, 04 Nov 2021 02:48:42 GMT
+      P3p:
+      - CP="NON"
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Server:
+      - Tableau
+      Set-Cookie:
+      - hid=10axpd-hap01; domain=.server.tableau.com; path=/; HttpOnly; Secure;
+        SameSite=None
+      - AWSELB=3DAB357D1283FCCC77AA83D08989B29DE92E63276A35E4A6497FDFF23627AAC36FDB3A158CB22BDF1A851E0BB71E913D1A340F4B536F5041BDA6C709962BC0D55630C584DD31AD9AA74EA892D878DD28603CF437C4;PATH=/;DOMAIN=.server.tableau.com;SECURE;HTTPONLY;SAMESITE=None
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      Vary:
+      - Accept-Encoding
+      X-Content-Type-Options:
+      - nosniff
+      X-Tableau:
+      - Tableau Server
+      X-Ua-Compatible:
+      - IE=Edge
+      X-Xss-Protection:
+      - 1; mode=block
+    status: '200 '
+    code: 200
+    duration: 995.000248ms
+- request:
+    body: "null"
+    form: {}
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      X-Tableau-Auth:
+      - Cab3YR3ORK-M4UHp5sWbXw|4qxMDA1hfuGptVUIDQwoPXMlJu3HFhS3
+    url: https://server.tableau.com/api/3.13/sites/529d2cc3-0b46-4360-aa69-688785ce1497/workbooks/a22c1975-13a4-4b66-88e1-d68757e2dc97/connections
+    method: GET
+  response:
+    body: '{"connections":{"connection":[{"datasource":{"id":"8ac2912e-066c-4ef6-9a40-ce5a1c2d159c","name":"Sales
+      Commission"},"id":"3d306f76-6c57-4084-a605-ec6fc8037193","type":"textscan","embedPassword":false,"serverAddress":"","userName":"","queryTaggingEnabled":false},{"datasource":{"id":"6f34315e-b37c-4cad-8650-c32562c92ed2","name":"Sales
+      Target (US)"},"id":"0cda0a63-cf5f-4b99-a671-c76114235f5f","type":"excel-direct","embedPassword":false,"serverAddress":"","userName":"","queryTaggingEnabled":false},{"datasource":{"id":"969e3732-a7f0-4563-8fec-ff1ad7c44470","name":"Sample
+      - Superstore"},"id":"ebe770d1-09f7-442c-8508-3354bf8333dc","type":"excel-direct","embedPassword":false,"serverAddress":"","userName":"","queryTaggingEnabled":false}]}}'
+    headers:
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Thu, 04 Nov 2021 02:48:44 GMT
+      P3p:
+      - CP="NON"
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Server:
+      - Tableau
+      Set-Cookie:
+      - hid=10axpd-hap01; domain=.server.tableau.com; path=/; HttpOnly; Secure;
+        SameSite=None
+      - AWSELB=3DAB357D1283FCCC77AA83D08989B29DE92E63276A35E4A6497FDFF23627AAC36FDB3A158CB22BDF1A851E0BB71E913D1A340F4B536F5041BDA6C709962BC0D55630C584DD31AD9AA74EA892D878DD28603CF437C4;PATH=/;DOMAIN=.server.tableau.com;SECURE;HTTPONLY;SAMESITE=None
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      Vary:
+      - Accept-Encoding
+      X-Content-Type-Options:
+      - nosniff
+      X-Tableau:
+      - Tableau Server
+      X-Ua-Compatible:
+      - IE=Edge
+      X-Xss-Protection:
+      - 1; mode=block
+    status: '200 '
+    code: 200
+    duration: 965.200302ms
+- request:
+    body: "null"
+    form: {}
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      X-Tableau-Auth:
+      - Cab3YR3ORK-M4UHp5sWbXw|4qxMDA1hfuGptVUIDQwoPXMlJu3HFhS3
+    url: https://server.tableau.com/api/3.13/sites/529d2cc3-0b46-4360-aa69-688785ce1497/workbooks/a22c1975-13a4-4b66-88e1-d68757e2dc97
+    method: GET
+  response:
+    body: '{"workbook":{"project":{"id":"46b2914d-6d2c-4cc5-ba2a-643840c036c6","name":"Samples"},"location":{"id":"46b2914d-6d2c-4cc5-ba2a-643840c036c6","type":"Project","name":"Samples"},"owner":{"id":"2aed1e7b-975b-430f-ab9d-a574bb88f245","name":"user@meteor"},"tags":{"tag":[{"label":"forecast"},{"label":"storage"}]},"views":{"view":[{"tags":{"tag":[{"label":"forecast"},{"label":"storage"}]},"id":"43807016-73ff-4152-a822-3cd300d9618a","name":"Overview","contentUrl":"Superstore/sheets/Overview","createdAt":"2021-11-01T11:32:35Z","updatedAt":"2021-11-01T11:32:35Z","viewUrlName":"Overview"},{"tags":{"tag":[{"label":"forecast"},{"label":"storage"}]},"id":"30df0a02-42a4-4899-b0ba-9b101b96b29b","name":"Product","contentUrl":"Superstore/sheets/Product","createdAt":"2021-11-01T11:32:35Z","updatedAt":"2021-11-01T11:32:35Z","viewUrlName":"Product"},{"tags":{"tag":[{"label":"forecast"},{"label":"storage"}]},"id":"ae74c34a-8e87-4843-b595-b3e75e7dd8db","name":"Customers","contentUrl":"Superstore/sheets/Customers","createdAt":"2021-11-01T11:32:35Z","updatedAt":"2021-11-01T11:32:35Z","viewUrlName":"Customers"},{"tags":{"tag":[{"label":"forecast"},{"label":"storage"}]},"id":"ca492b1a-adc6-4d49-a2c5-f0028d22b5f8","name":"Shipping","contentUrl":"Superstore/sheets/Shipping","createdAt":"2021-11-01T11:32:35Z","updatedAt":"2021-11-01T11:32:35Z","viewUrlName":"Shipping"},{"tags":{"tag":[{"label":"forecast"},{"label":"storage"}]},"id":"b3e230a3-8f06-4ef5-9bca-e533c8d7aac1","name":"Performance","contentUrl":"Superstore/sheets/Performance","createdAt":"2021-11-01T11:32:35Z","updatedAt":"2021-11-01T11:32:35Z","viewUrlName":"Performance"},{"tags":{"tag":[{"label":"forecast"},{"label":"storage"}]},"id":"4a2aac89-b7fe-4412-86f2-e4312495862d","name":"Commission
+      Model","contentUrl":"Superstore/sheets/CommissionModel","createdAt":"2021-11-01T11:32:35Z","updatedAt":"2021-11-01T11:32:35Z","viewUrlName":"CommissionModel"},{"tags":{"tag":[{"label":"forecast"},{"label":"storage"}]},"id":"752b51c0-b404-4e68-abad-204f0e10cefe","name":"Order
+      Details","contentUrl":"Superstore/sheets/OrderDetails","createdAt":"2021-11-01T11:32:35Z","updatedAt":"2021-11-01T11:32:35Z","viewUrlName":"OrderDetails"},{"tags":{"tag":[{"label":"forecast"},{"label":"storage"}]},"id":"6a9f4625-565e-47b9-b7dd-159a27f8b46f","name":"Forecast","contentUrl":"Superstore/sheets/Forecast","createdAt":"2021-11-01T11:32:35Z","updatedAt":"2021-11-01T11:32:35Z","viewUrlName":"Forecast"},{"tags":{"tag":[{"label":"forecast"},{"label":"storage"}]},"id":"998155ce-e41d-4262-9738-b056ea4b202d","name":"What
+      If Forecast","contentUrl":"Superstore/sheets/WhatIfForecast","createdAt":"2021-11-01T11:32:35Z","updatedAt":"2021-11-01T11:32:35Z","viewUrlName":"WhatIfForecast"}]},"dataAccelerationConfig":{"accelerationEnabled":false},"id":"a22c1975-13a4-4b66-88e1-d68757e2dc97","name":"Superstore","description":"A
+      sample superstore","contentUrl":"Superstore","webpageUrl":"https://server.tableau.com/#/site/testdev550928/workbooks/88353","showTabs":"true","size":"2","createdAt":"2021-11-01T11:32:35Z","updatedAt":"2021-11-02T06:07:18Z","encryptExtracts":"false","defaultViewId":"43807016-73ff-4152-a822-3cd300d9618a"}}'
+    headers:
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Thu, 04 Nov 2021 02:48:43 GMT
+      P3p:
+      - CP="NON"
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Server:
+      - Tableau
+      Set-Cookie:
+      - hid=10axpd-hap02; domain=.server.tableau.com; path=/; HttpOnly; Secure;
+        SameSite=None
+      - AWSELB=3DAB357D1283FCCC77AA83D08989B29DE92E63276AE77AD4EE133E11E6F8E8568C0C008FC516BFCBA963679DF38E2D1FF97BC1EC8511A6AA9828B89C5E5846354B6A1B34CAF64809065F8EB34318B654D2E3D02F6F;PATH=/;DOMAIN=.server.tableau.com;SECURE;HTTPONLY;SAMESITE=None
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      Vary:
+      - Accept-Encoding
+      X-Content-Type-Options:
+      - nosniff
+      X-Tableau:
+      - Tableau Server
+      X-Ua-Compatible:
+      - IE=Edge
+      X-Xss-Protection:
+      - 1; mode=block
+    status: '200 '
+    code: 200
+    duration: 965.107671ms
+- request:
+    body: "null"
+    form: {}
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      X-Tableau-Auth:
+      - Cab3YR3ORK-M4UHp5sWbXw|4qxMDA1hfuGptVUIDQwoPXMlJu3HFhS3
+    url: https://server.tableau.com/api/3.13/sites/529d2cc3-0b46-4360-aa69-688785ce1497/workbooks/37040233-8f4c-4b17-aecf-5c4be36dbf27/connections
+    method: GET
+  response:
+    body: '{"connections":{"connection":[{"datasource":{"id":"1bf138c3-1e6d-4afa-82c0-5ccd387be2bd","name":"Sales
+      Navigator Connection"},"id":"1b3cc3e7-90a6-44a3-9f60-bbfd0d4a45fa","type":"webdata-direct:linkedin-snap","embedPassword":false,"serverAddress":"connectors.tableau.com","serverPort":"443","userName":"xxxxxxxxxx","queryTaggingEnabled":false}]}}'
+    headers:
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Thu, 04 Nov 2021 02:48:45 GMT
+      P3p:
+      - CP="NON"
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Server:
+      - Tableau
+      Set-Cookie:
+      - hid=10axpd-hap02; domain=.server.tableau.com; path=/; HttpOnly; Secure;
+        SameSite=None
+      - AWSELB=3DAB357D1283FCCC77AA83D08989B29DE92E63276AE77AD4EE133E11E6F8E8568C0C008FC516BFCBA963679DF38E2D1FF97BC1EC8511A6AA9828B89C5E5846354B6A1B34CAF64809065F8EB34318B654D2E3D02F6F;PATH=/;DOMAIN=.server.tableau.com;SECURE;HTTPONLY;SAMESITE=None
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      Vary:
+      - Accept-Encoding
+      X-Content-Type-Options:
+      - nosniff
+      X-Tableau:
+      - Tableau Server
+      X-Ua-Compatible:
+      - IE=Edge
+      X-Xss-Protection:
+      - 1; mode=block
+    status: '200 '
+    code: 200
+    duration: 924.852026ms
+- request:
+    body: "null"
+    form: {}
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      X-Tableau-Auth:
+      - Cab3YR3ORK-M4UHp5sWbXw|4qxMDA1hfuGptVUIDQwoPXMlJu3HFhS3
+    url: https://server.tableau.com/api/3.13/sites/529d2cc3-0b46-4360-aa69-688785ce1497/workbooks/37040233-8f4c-4b17-aecf-5c4be36dbf27
+    method: GET
+  response:
+    body: '{"workbook":{"project":{"id":"c95e1f64-1c3c-4ddf-8999-047a54e2af44","name":"test-meteor"},"location":{"id":"c95e1f64-1c3c-4ddf-8999-047a54e2af44","type":"Project","name":"test-meteor"},"owner":{"id":"2aed1e7b-975b-430f-ab9d-a574bb88f245","name":"user@meteor"},"tags":{},"views":{"view":[{"tags":{},"id":"aea8019f-b29a-4e0f-b5d8-a96fc52188c1","name":"InMail
+      Engagement","contentUrl":"InMailEngagement/sheets/InMailEngagement","createdAt":"2021-11-02T11:57:32Z","updatedAt":"2021-11-02T11:57:32Z","viewUrlName":"InMailEngagement"}]},"dataAccelerationConfig":{"accelerationEnabled":false},"id":"37040233-8f4c-4b17-aecf-5c4be36dbf27","name":"InMail
+      Engagement","contentUrl":"InMailEngagement","webpageUrl":"https://server.tableau.com/#/site/testdev550928/workbooks/88403","showTabs":"true","size":"1","createdAt":"2021-11-02T11:57:32Z","updatedAt":"2021-11-02T11:57:33Z","encryptExtracts":"false","defaultViewId":"aea8019f-b29a-4e0f-b5d8-a96fc52188c1"}}'
+    headers:
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Thu, 04 Nov 2021 02:48:45 GMT
+      P3p:
+      - CP="NON"
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Server:
+      - Tableau
+      Set-Cookie:
+      - hid=10axpd-hap01; domain=.server.tableau.com; path=/; HttpOnly; Secure;
+        SameSite=None
+      - AWSELB=3DAB357D1283FCCC77AA83D08989B29DE92E63276A35E4A6497FDFF23627AAC36FDB3A158CB22BDF1A851E0BB71E913D1A340F4B536F5041BDA6C709962BC0D55630C584DD31AD9AA74EA892D878DD28603CF437C4;PATH=/;DOMAIN=.server.tableau.com;SECURE;HTTPONLY;SAMESITE=None
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      Vary:
+      - Accept-Encoding
+      X-Content-Type-Options:
+      - nosniff
+      X-Tableau:
+      - Tableau Server
+      X-Ua-Compatible:
+      - IE=Edge
+      X-Xss-Protection:
+      - 1; mode=block
+    status: '200 '
+    code: 200
+    duration: 959.542951ms

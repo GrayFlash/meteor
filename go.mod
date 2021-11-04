@@ -13,6 +13,7 @@ require (
 	github.com/cenkalti/backoff/v4 v4.1.1
 	github.com/containerd/continuity v0.1.0 // indirect
 	github.com/denisenkom/go-mssqldb v0.10.0
+	github.com/dnaeon/go-vcr/v2 v2.0.1
 	github.com/elastic/go-elasticsearch v0.0.0
 	github.com/elastic/go-elasticsearch/v8 v8.0.0-20210708134649-33f644c8e327
 	github.com/etsy/statsd v0.9.0
@@ -25,7 +26,6 @@ require (
 	github.com/go-sql-driver/mysql v1.6.0
 	github.com/gocql/gocql v0.0.0-20210817081954-bc256bbb90de
 	github.com/golang/groupcache v0.0.0-20210331224755-41bb18bfe9da // indirect
-	github.com/golang/protobuf v1.5.2
 	github.com/google/go-github/v37 v37.0.0
 	github.com/gopherjs/gopherjs v0.0.0-20210503212227-fb464eba2686 // indirect
 	github.com/hashicorp/go-hclog v0.16.1
